@@ -17,23 +17,19 @@ n=0
 
 INFO = '''
         
-        |#Author: Valentin Genard               |
-        |#Date: 01/06/2016                      |
-        |#Changing the Description of this tool |
-        | Won't made you the coder              |
-        |#I don't take responsability for       |
-        | problems of any kind                  |
-        +---------------------------------------+
-        |.....JARVISE VIRTUAL INTELLIGENCE......|
-        +=======================================+
-        |              OPTIONS:                 |
-        |#hello/hi     #goodbye    #sleep mode  |
-        |#your name    #jarvis     #what time   |
-        |#asite.com    #next music #music       |
-        |#pause music  #wifi       #thank you   |
-        |#start/stop someapp                    |
-        |#pip install/uninstall anapp          |
-        |#googlemaps tanyplace                  |
+        +----------------------+
+        |Your Virtual Assistant|
+        +======================+
+        |      OPTIONS:        |
+        |#Latest news          |
+        |#Stock market view    |
+        |#Play music           |
+        |#Toggle wi-fi         |
+        |#Open up web pages    |
+        |#Google maps          |
+        |#Install apps         |
+        |#Negotiate around your|
+        |PC with your voice    |
         '''
 print(INFO)
 # JARVIS'S EARS======================== SENSITIVE BRAIN
