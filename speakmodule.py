@@ -18,4 +18,8 @@ def wifi():
             return True
         except:
             pass
+<<<<<<< HEAD
         return False
+=======
+        return False
+>>>>>>> fa766b9927405c3c73aee47bdd78e18adc467516
