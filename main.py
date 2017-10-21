@@ -10,10 +10,11 @@ import subprocess
 import glob
 from time import localtime, strftime
 import speakmodule
+import news
 
 doss = os.getcwd()
-i=0
-n=0
+i = 0
+n = 0
 
 INFO = '''
         
@@ -32,7 +33,7 @@ INFO = '''
         |PC with your voice    |
         '''
 print(INFO)
-# JARVIS'S EARS======================== SENSITIVE BRAIN
+
 # obtain audio
 while (i<1):
     r = sr.Recognizer()
@@ -41,14 +42,12 @@ while (i<1):
         n=(n+1)     
         print("Say something!")
         audio = r.listen(source)
-                                                   # interprete audio (Google Speech Recognition)
+    # Google Speech Recognition
     try:
         s = (r.recognize_google(audio))
         message = (s.lower())
         print (message)
 
-
-# POLITE JARVIS ====== BRAIN 1
     
         if ('goodbye') in message:                          
             rand = ['Goodbye Sir', 'Powering off in 3, 2, 1, 0']
@@ -60,7 +59,7 @@ while (i<1):
             speakmodule.speak(rand,n,mixer)
 
         if ('thanks') in message or ('tanks') in message or ('thank you') in message:
-            rand = ['You are wellcome', 'no problem']
+            rand = ['You are welcome', 'no problem']
             speakmodule.speak(rand,n,mixer)
 
         if message == ('jarvis'):
@@ -79,21 +78,23 @@ while (i<1):
             rand = ['My name is Jarvis, at your service sir']
             speakmodule.speak(rand,n,mixer)
 
-# USEFUL JARVIS ============ BRAIN 2
-
         if ('wi-fi') in message:  
             REMOTE_SERVER = "www.google.com"
             speakmodule.wifi()
             rand = ['We are connected']
             speakmodule.speak(rand,n,mixer)
 
-        if ('.com') in message :
+        if ('.com') in message or ('.net') in message or('.org') in message:
             rand = ['Opening' + message]         
             Chrome = ("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s")
             speakmodule.speak(rand,n,mixer)
             webbrowser.get(Chrome).open('http://www.'+message)
             print ('')
-            
+
+        if('news') in message or ('neus') in message or ('nyus') in message:
+            rand = ['Fetching the latest india and world news']
+            speakmodule.speak(rand,n,mixer)
+            news.start()
 
         if ('google maps') in message:
             query = message
