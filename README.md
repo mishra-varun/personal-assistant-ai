@@ -1,1 +1,1 @@
-# Personal assistant in python
+# personal-assistant-ai
