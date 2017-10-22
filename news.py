@@ -24,4 +24,12 @@ def start():
         print(submission.title, '\n')
         print(submission.url, '\n')
         #print('==============')
+def stockmkt():
+    st_counter = 0
+    for submission in reddit.subreddit('stockmarket').hot(limit=10):
+        st_counter += 1
+        print('==============', st_counter, '=============\n')
+        print(submission.title, '\n')
+        #print(submission.url, '\n')
 start()
+stockmkt()
